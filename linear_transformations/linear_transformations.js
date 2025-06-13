@@ -192,7 +192,7 @@ function updateMatrix() {
     }
     
     if (errors.length > 0) {
-        alert("UH OH for: " + inputs.join(", "));
+        alert("CHECK for: " + inputs.join(", "));
     }
 }
 
