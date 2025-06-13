@@ -154,7 +154,6 @@ function assignCoords() {
 }
 
 function reset() {
-    alert("Button works!");
     points = [];
 
     x_step = y_step = 0;
