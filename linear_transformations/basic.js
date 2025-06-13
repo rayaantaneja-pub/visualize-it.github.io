@@ -1,5 +1,5 @@
 let screen_width = window.innerWidth, screen_height = window.innerHeight;
-let fps = 2;
+let fps = 24;
 
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
