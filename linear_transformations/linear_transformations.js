@@ -171,22 +171,22 @@ function updateMatrix() {
     let errors = [];
     
     try {
-        a = math.evaluate(inputs.0);
+        a = math.evaluate(inputs[0]);
     } catch {
         errors.push("a");
     }
     try {
-        b = math.evaluate(inputs.1);
+        b = math.evaluate(inputs[1]);
     } catch {
         errors.push("b");
     }
     try {
-        c = math.evaluate(inputs.2);
+        c = math.evaluate(inputs[2]);
     } catch {
         errors.push("c");
     }
     try {
-        d = math.evaluate(inputs.3);
+        d = math.evaluate(inputs[3]);
     } catch {
         errors.push("d");
     }
