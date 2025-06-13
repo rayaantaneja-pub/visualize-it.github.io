@@ -167,31 +167,32 @@ function clearValues() {
 }
 
 function updateMatrix() {
+    let inputs = [a_input.value, b_input.value, c_input.value, d_input.value];
     let errors = [];
     
     try {
-        a = math.evaluate(a_input.value);
+        a = math.evaluate(inputs.0);
     } catch {
         errors.push("a");
     }
     try {
-        b = math.evaluate(b_input.value);
+        b = math.evaluate(inputs.1);
     } catch {
         errors.push("b");
     }
     try {
-        c = math.evaluate(c_input.value);
+        c = math.evaluate(inputs.2);
     } catch {
         errors.push("c");
     }
     try {
-        d = math.evaluate(d_input.value);
+        d = math.evaluate(inputs.3);
     } catch {
         errors.push("d");
     }
     
     if (errors.length > 0) {
-        alert("UH OH for: " + errors.join(", "));
+        alert("UH OH for: " + inputs.join(", "));
     }
 }
 
