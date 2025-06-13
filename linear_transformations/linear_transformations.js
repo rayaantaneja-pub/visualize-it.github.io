@@ -167,13 +167,31 @@ function clearValues() {
 }
 
 function updateMatrix() {
-    try { 
+    let errors = [];
+    
+    try {
         a = math.evaluate(a_input.value);
+    } catch {
+        errors.push("a");
+    }
+    try {
         b = math.evaluate(b_input.value);
+    } catch {
+        errors.push("b");
+    }
+    try {
         c = math.evaluate(c_input.value);
+    } catch {
+        errors.push("c");
+    }
+    try {
         d = math.evaluate(d_input.value);
     } catch {
-        alert("Please enter valid math expressions!");
+        errors.push("d");
+    }
+    
+    if (errors.length > 0) {
+        alert("Please enter valid math expressions for: " + errors.join(", "));
     }
 }
 
