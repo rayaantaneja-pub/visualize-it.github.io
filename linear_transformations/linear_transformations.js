@@ -191,7 +191,7 @@ function updateMatrix() {
     }
     
     if (errors.length > 0) {
-        alert("Please enter valid math expressions for: " + errors.join(", "));
+        alert("UH OH for: " + errors.join(", "));
     }
 }
 
