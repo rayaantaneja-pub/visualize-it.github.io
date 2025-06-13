@@ -173,26 +173,26 @@ function updateMatrix() {
     try {
         a = math.evaluate(inputs[0]);
     } catch {
-        errors.push("a");
+        errors.push(inputs[0]);
     }
     try {
         b = math.evaluate(inputs[1]);
     } catch {
-        errors.push("b");
+        errors.push(inputs[1]);
     }
     try {
         c = math.evaluate(inputs[2]);
     } catch {
-        errors.push("c");
+        errors.push(inputs[2]);
     }
     try {
         d = math.evaluate(inputs[3]);
     } catch {
-        errors.push("d");
+        errors.push(inputs[3]);
     }
     
     if (errors.length > 0) {
-        alert("CHECK for: " + inputs.join(", "));
+        alert("CHECK for: " + errors.join(", "));
     }
 }
 
