@@ -167,10 +167,14 @@ function clearValues() {
 }
 
 function updateMatrix() {
-    a = Number.parseFloat(a_input.value);
-    b = Number.parseFloat(b_input.value);
-    c = Number.parseFloat(c_input.value);
-    d = Number.parseFloat(d_input.value);
+    try { 
+        a = math.evaluate(a_input.value);
+        b = math.evaluate(b_input.value);
+        c = math.evaluate(c_input.value);
+        d = math.evaluate(d_input.value);
+    } catch {
+        alert("Please enter valid math expressions!");
+    }
 }
 
 function updateTextFields(prec = 4) {
