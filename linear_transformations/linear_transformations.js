@@ -167,32 +167,13 @@ function clearValues() {
 }
 
 function updateMatrix() {
-    let inputs = [a_input.value, b_input.value, c_input.value, d_input.value];
-    let errors = [];
-    
     try {
-        a = math.evaluate(inputs[0]);
+      a = math.evaluate(a_input.value);
+      b = math.evaluate(b_input.value);
+      c = math.evaluate(c_input.value);
+      d = math.evaluate(d_input.value);
     } catch {
-        errors.push(inputs[0]);
-    }
-    try {
-        b = math.evaluate(inputs[1]);
-    } catch {
-        errors.push(inputs[1]);
-    }
-    try {
-        c = math.evaluate(inputs[2]);
-    } catch {
-        errors.push(inputs[2]);
-    }
-    try {
-        d = math.evaluate(inputs[3]);
-    } catch {
-        errors.push(inputs[3]);
-    }
-    
-    if (errors.length > 0) {
-        alert("CHECK for: " + errors.join(", "));
+      alert("Invalid input");
     }
 }
 
